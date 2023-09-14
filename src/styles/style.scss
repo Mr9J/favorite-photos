@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+@import "./nav";
+@import "./homepage";
+@import "./signIn";
+@import "./collection";
+@import "./footer";
+@import "./about";
+@import "./page404";

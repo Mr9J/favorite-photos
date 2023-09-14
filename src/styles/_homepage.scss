@@ -1,0 +1,102 @@
+div.Homepage {
+  min-height: 100vh;
+
+  div.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    input {
+      font-size: 36px;
+      padding: 10px;
+      border: 3px solid rgb(159, 45, 32);
+    }
+    button {
+      font-size: 36px;
+      color: white;
+      padding: 10px;
+      border: 3px solid rgb(159, 45, 32);
+      background-color: rgb(159, 45, 32);
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: rgb(159, 45, 32);
+      }
+    }
+  }
+
+  div.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    div.photos-result {
+      border-radius: 20px;
+      background-color: rgb(159, 45, 32);
+      border: 3px solid white;
+      margin: 1rem;
+      padding: 1rem;
+      width: 400px;
+      color: white;
+      h2 {
+        padding: 5px;
+        font-size: 1.5rem;
+      }
+      button {
+        margin: 10px 5px;
+        padding: 5px;
+        background-color: white;
+        border-radius: 15px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: rgb(159, 45, 32);
+        border: none;
+        cursor: pointer;
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: rgb(159, 45, 32);
+        }
+        &:hover {
+          background-color: rgb(159, 45, 32);
+          color: white;
+          a {
+            color: white;
+          }
+        }
+      }
+      div.photo-container {
+        overflow: hidden;
+        height: 40vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  div.more-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    button {
+      padding: 1rem;
+      font-size: 36px;
+      border: none;
+      background-color: rgb(159, 45, 32);
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: rgb(159, 45, 32);
+      }
+    }
+  }
+}

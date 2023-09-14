@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Homepage from "./components/Homepage-component";
+import About from "./components/About-component";
+import SignIn from "./components/SignIn-component";
+import Collection from "./components/Collection-component";
+import Page404 from "./components/Page404-component";
+import ProtectedRoutes from "./config/protect";
+import "./styles/style.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Homepage />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="signIn" element={<SignIn />}></Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="collection" element={<Collection />}></Route>
+            </Route>
+            <Route path="*" element={<Page404 />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
